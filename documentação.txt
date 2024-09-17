@@ -1,0 +1,11 @@
+Respositório do curso:
+https://github.com/cod3rcursos/web-moderno
+
+Aprendar com erro dos outros(Stack Over Flow)
+
+*************** ATALHOS *****************
+ctrl + alt + n > Executa código
+ctrl + / > Transforma linhas selecionadas em comentários
+alt + shift + seta para baixo > replica a linha atual para baixo
+ctrl + x > Exclui linha
+shift + alt + F > Faz identação automatica

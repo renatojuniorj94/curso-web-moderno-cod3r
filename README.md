@@ -1,2 +1,2 @@
-# curso web moderno cod3r
- Todo apredizado do curso está aqui!
+# curso-web-moderno
+ Curso Web Moder - COD3R
