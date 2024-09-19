@@ -9,3 +9,9 @@ ctrl + / > Transforma linhas selecionadas em comentários
 alt + shift + seta para baixo > replica a linha atual para baixo
 ctrl + x > Exclui linha
 shift + alt + F > Faz identação automatica
+
+String:
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String
+https://www.w3schools.com/js/js_string_methods.asp,
+
+*PARAMOS COM 8 MINUTOSas
