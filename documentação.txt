@@ -18,3 +18,7 @@ https://www.w3schools.com/JsrEF/jsref_charcodeat.asp
 Template string:
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 https://www.w3schools.com/js/js_string_templates.asp
+
+Boolean:
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+https://www.w3schools.com/js/js_booleans.asp
