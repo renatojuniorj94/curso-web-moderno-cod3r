@@ -13,5 +13,6 @@ shift + alt + F > Faz identação automatica
 String:
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String
 https://www.w3schools.com/js/js_string_methods.asp,
+https://www.w3schools.com/JsrEF/jsref_charcodeat.asp
 
 *PARAMOS COM 8 MINUTOSas
