@@ -34,3 +34,8 @@ https://www.w3schools.com/js/js_arrays.asp
 Object:
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
 https://www.w3schools.com/js/js_objects.asp
+
+Null e undefined:
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/null
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined
+https://www.w3schools.com/jsref/jsref_undefined.asp
