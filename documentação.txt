@@ -43,3 +43,7 @@ https://www.w3schools.com/jsref/jsref_undefined.asp
 Função:
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Functions
 https://www.w3schools.com/js/js_functions.asp
+
+Var:
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/var
+https://www.w3schools.com/js/js_variables.asp
