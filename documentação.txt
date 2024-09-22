@@ -22,3 +22,7 @@ https://www.w3schools.com/js/js_string_templates.asp
 Boolean:
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 https://www.w3schools.com/js/js_booleans.asp
+
+Array:
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array
+https://www.w3schools.com/js/js_arrays.asp
