@@ -56,3 +56,8 @@ https://www.w3schools.com/js/js_let.asp
 
 Let é de escopo local.
 Em caso de let com o mesmo nome, o bloco de menor relevancia tem preferencia.
+
+Hoisting:
+https://developer.mozilla.org/pt-BR/docs/Glossary/Hoisting
+https://www.w3schools.com/js/js_hoisting.asp
+https://www.youtube.com/watch?v=A9RwfhYjabw&t=1s (Cod3r)
