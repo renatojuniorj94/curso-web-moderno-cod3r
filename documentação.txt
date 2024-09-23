@@ -47,3 +47,12 @@ https://www.w3schools.com/js/js_functions.asp
 Var:
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/var
 https://www.w3schools.com/js/js_variables.asp
+
+Var tem escopo global e escopo de função.
+
+Let:
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/let
+https://www.w3schools.com/js/js_let.asp
+
+Let é de escopo local.
+Em caso de let com o mesmo nome, o bloco de menor relevancia tem preferencia.
