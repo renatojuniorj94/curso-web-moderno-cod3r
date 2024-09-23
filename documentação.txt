@@ -61,3 +61,7 @@ Hoisting:
 https://developer.mozilla.org/pt-BR/docs/Glossary/Hoisting
 https://www.w3schools.com/js/js_hoisting.asp
 https://www.youtube.com/watch?v=A9RwfhYjabw&t=1s (Cod3r)
+
+Função vs Objeto:
+new operator (Operador 'new'):
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/new
