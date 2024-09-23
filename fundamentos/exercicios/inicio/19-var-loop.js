@@ -12,5 +12,6 @@ for (var i = 0; i < 10; i++) { //Nesse caso, var não tem escopo de função
     })
 }
 
+//Quando 'var i' saiu do bloco, ele ficou com valor '10'.
 funcs[2] ()
 funcs[8] ()
