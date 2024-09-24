@@ -65,3 +65,8 @@ https://www.youtube.com/watch?v=A9RwfhYjabw&t=1s (Cod3r)
 Função vs Objeto:
 new operator (Operador 'new'):
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/new
+
+Notação ponto:
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_accessors
+https://pt.stackoverflow.com/questions/463578/aceder-a-propriedades-em-javascript-nota%C3%A7%C3%A3o-de-ponto-ou-colchetes
+https://www.freecodecamp.org/portuguese/news/tutorial-sobre-chaves-em-objetos-do-javascript-como-usar-um-par-chave-valor-em-js/
