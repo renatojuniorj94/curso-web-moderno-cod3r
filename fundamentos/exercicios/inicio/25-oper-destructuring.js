@@ -32,11 +32,24 @@ console.log(logradouro, numero, cep) */
 
 //Parte 2 - Array
 
-const [a] = [10] //Criando um array 'a'com valor '10'
+/* const [a] = [10] //Criando um array 'a'com valor '10'
 console.log(a)
 
 const [n1, , n3, , n5, n6 = 0] = [10, 7, 9, 8] //n1 = 10, n3 =9, n5 = undefined, n6 = 0
 console.log(n1, n3, n5, n6)
 
 const [, [, nota, valor]] = [[, 8, 8], [9, 6, 8]]
-console.log(nota, valor)
+console.log(nota, valor) */
+
+//Parte 3 - Function
+
+function rand({min = 0, max = 1001}) {
+    const valor = Math.random() * (max - min) + min
+    return Math.floor(valor)
+}
+
+const obj = {max: 51, min: 40}
+console.log(rand(obj)) //Entre 40 e 50
+console.log(rand({min: 995})) //Entre 995 e 1000
+console.log(rand({})) //Entre 0 e 1000
+console.log(rand())
