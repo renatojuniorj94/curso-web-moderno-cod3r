@@ -88,3 +88,16 @@ Operadores aritméticos:
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators#operadores_aritmeticos
 
 Operadores binários executam ações com dois operandos. Em uma expressão complexa, (dois ou mais operandos), a ordem de avaliação depende de regras de precedência. Operadores unários são operadores aritméticos que desempenham uma ação em um único operando.
+
+Operadores relacionais / de comparação:
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators#operador_virgula
+https://www.w3schools.com/js/js_comparisons.asp
+
+== 	    Igual á
+=== 	Estritamente igual
+!= 	    Não igual
+!== 	Estritamente não igual
+> 	    Maior que
+< 	    Menor que
+>= 	    Maior que ou igual
+<= 	    Menor que ou igual
