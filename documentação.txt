@@ -75,3 +75,11 @@ Operadores de atribuição:
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators#operador_atribuicao
 
 '=', '+=', '-=', '*=', '/=', '%='
+
+Operadores Destructuring(Desestruturação):
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+https://chatgpt.com/share/66f40bc5-5c84-8011-82c4-77055c8512a1
+
+O destructuring em JavaScript é uma maneira concisa de extrair valores de arrays ou propriedades de objetos e atribuí-los a variáveis de uma forma mais simples e legível.
+
+O destructuring é uma ferramenta poderosa que facilita o código ao trabalhar com arrays e objetos. Ele permite extrair dados de forma mais clara, reduzindo a necessidade de código repetitivo e tornando a leitura do código mais simples.
