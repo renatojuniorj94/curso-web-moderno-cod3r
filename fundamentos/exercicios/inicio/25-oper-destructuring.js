@@ -43,7 +43,7 @@ console.log(nota, valor) */
 
 //Parte 3 - Function
 
-function rand({min = 0, max = 1001}) {
+/* function rand({min = 0, max = 1001}) {
     const valor = Math.random() * (max - min) + min
     return Math.floor(valor)
 }
@@ -52,4 +52,18 @@ const obj = {max: 51, min: 40}
 console.log(rand(obj)) //Entre 40 e 50
 console.log(rand({min: 995})) //Entre 995 e 1000
 console.log(rand({})) //Entre 0 e 1000
-console.log(rand())
+console.log(rand()) */
+
+//Parte 4 - Array dentro de function
+
+function rand([min = 0, max = 1001]) {
+    if (min > max) [min, max] = [max, min] // Condicional 'if' / Operador destructuring // Acesssando e invertendo a array
+    const valor = Math.random() * (max - min) + min
+    return Math.floor(valor)
+}
+
+console.log(rand([50, 40])) //Sorteia 1 número entre 40 e 49
+console.log(rand([990])) //min = 990, max = 1000 (padrão)
+console.log(rand([, 50])) //min = 0 (padrão), max = 50
+console.log(rand([])) //min = 0 (padrão), max = 1000 (padrão)
+console.log(rand()) //Apresenta erro porque a array está 'undefined'
