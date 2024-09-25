@@ -5,7 +5,8 @@ const subtracao = d - b
 const multiplacacao = a * b
 const divisao = d / a
 const modulo = a % 2 //Resto da divisão
-console.log(soma, subtracao, multiplacacao, divisao, modulo)
+const exponenciacao = 2 ** 3 //Método antigo > const exponenciacao = Math.pow(2, 3)
+console.log(soma, subtracao, multiplacacao, divisao, modulo, exponenciacao)
 
 
 // '+' é um operador binario

@@ -104,5 +104,14 @@ https://www.w3schools.com/js/js_comparisons.asp
 <= 	    Menor que ou igual
 
 Operadores lógicos:
-
 https://www.w3schools.com/js/js_comparisons.asp
+
+&& > And
+|| > Or
+!  > 
+
+Operador unário:
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators#operadores_unario
+
+++i ou --i > prefixado
+i++ ou i-- > pósfixado

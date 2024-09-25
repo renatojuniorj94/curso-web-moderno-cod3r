@@ -14,3 +14,7 @@ console.log(b)
 
 b %= 2 // b = b % 2
 console.log(b)
+
+b = 3
+b **= 3 // b = b ** 3
+console.log(b)
