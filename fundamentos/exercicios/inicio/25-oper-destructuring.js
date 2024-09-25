@@ -4,7 +4,9 @@ O destructuring em JavaScript é uma maneira concisa de extrair valores de array
 O destructuring é uma ferramenta poderosa que facilita o código ao trabalhar com arrays e objetos. Ele permite extrair dados de forma mais clara, reduzindo a necessidade de código repetitivo e tornando a leitura do código mais simples.
 */
 
-const pessoa = {
+//Parte 1 - Objetos
+
+/* const pessoa = {
     nome: 'Ana',
     idade: 5,
     endereco: {
@@ -26,4 +28,15 @@ const {sobrenome, bemHumorada = true} = pessoa //undefined true (Se não houver 
 console.log(sobrenome, bemHumorada)
 
 const {endereco: {logradouro, numero, cep}} = pessoa
-console.log(logradouro, numero, cep)
+console.log(logradouro, numero, cep) */
+
+//Parte 2 - Array
+
+const [a] = [10] //Criando um array 'a'com valor '10'
+console.log(a)
+
+const [n1, , n3, , n5, n6 = 0] = [10, 7, 9, 8] //n1 = 10, n3 =9, n5 = undefined, n6 = 0
+console.log(n1, n3, n5, n6)
+
+const [, [, nota, valor]] = [[, 8, 8], [9, 6, 8]]
+console.log(nota, valor)
