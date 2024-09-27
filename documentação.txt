@@ -115,3 +115,8 @@ https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_op
 
 ++i ou --i > prefixado
 i++ ou i-- > pósfixado
+
+Operador ternário:
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Conditional_operator
+
+Funciona como uma estrutura condicional resumida (condição ? expr1 : expr2)
