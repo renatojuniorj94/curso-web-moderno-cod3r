@@ -123,3 +123,7 @@ Funciona como uma estrutura condicional resumida (condição ? expr1 : expr2)
 
 Tratamento de erro:
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
+
+If e Else:
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/if...else
+https://www.w3schools.com/js/js_if_else.asp
