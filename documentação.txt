@@ -127,3 +127,7 @@ https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Control_flow_and_e
 If e Else:
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/if...else
 https://www.w3schools.com/js/js_if_else.asp
+
+Switch:
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/switch
+https://www.w3schools.com/js/js_switch.asp
