@@ -131,3 +131,10 @@ https://www.w3schools.com/js/js_if_else.asp
 Switch:
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/switch
 https://www.w3schools.com/js/js_switch.asp
+
+Laços de repetições:
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Loops_and_iteration
+
+While:
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/while
+https://www.w3schools.com/js/js_loop_while.asp
