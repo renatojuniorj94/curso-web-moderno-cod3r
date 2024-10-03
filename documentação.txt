@@ -138,3 +138,13 @@ https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Loops_and_iteratio
 While:
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/while
 https://www.w3schools.com/js/js_loop_while.asp
+
+Do While:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while
+https://www.w3schools.com/jsref/jsref_dowhile.asp
+
+Do while é a única expressão que é declarada no final, exemplo:
+
+do {
+
+} while (expressão)
