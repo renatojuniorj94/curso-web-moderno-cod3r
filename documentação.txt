@@ -156,3 +156,8 @@ https://www.w3schools.com/js/js_loop_for.asp
 For in:
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in
 https://www.w3schools.com/JS/js_loop_forin.asp
+
+Break / Continue:
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/break
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/continue
+https://www.w3schools.com/js/js_break.asp
