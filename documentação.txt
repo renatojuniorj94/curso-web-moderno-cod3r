@@ -143,8 +143,12 @@ Do While:
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while
 https://www.w3schools.com/jsref/jsref_dowhile.asp
 
-Do while é a única expressão que é declarada no final, exemplo:
+Do while é a única estruturade repetição onde a expressão é declarada no final, fazendo isso, garante que a estrutura vá rodar pelo menos uma vez, exemplo:
 
 do {
 
 } while (expressão)
+
+For:
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for
+https://www.w3schools.com/js/js_loop_for.asp
