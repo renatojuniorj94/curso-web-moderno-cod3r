@@ -161,3 +161,7 @@ Break / Continue:
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/break
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/continue
 https://www.w3schools.com/js/js_break.asp
+
+Arrow function:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+https://www.w3schools.com/js/js_arrow_function.asp
