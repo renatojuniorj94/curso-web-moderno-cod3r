@@ -165,3 +165,9 @@ https://www.w3schools.com/js/js_break.asp
 Arrow function:
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 https://www.w3schools.com/js/js_arrow_function.asp
+
+This:
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/this
+https://www.w3schools.com/js/js_this.asp
+
+Em JavaScript, a thispalavra-chave se refere a um objeto .
