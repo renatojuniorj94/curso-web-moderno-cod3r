@@ -171,3 +171,7 @@ https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/this
 https://www.w3schools.com/js/js_this.asp
 
 Em JavaScript, a thispalavra-chave se refere a um objeto .
+
+Callback:
+https://developer.mozilla.org/pt-BR/docs/Glossary/Callback_function
+https://www.w3schools.com/js/js_callback.asp
