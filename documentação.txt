@@ -175,3 +175,8 @@ Em JavaScript, a thispalavra-chave se refere a um objeto .
 Callback:
 https://developer.mozilla.org/pt-BR/docs/Glossary/Callback_function
 https://www.w3schools.com/js/js_callback.asp
+
+IIFE:
+https://developer.mozilla.org/pt-BR/docs/Glossary/IIFE
+
+IIFE (Immediately Invoked Function Expression) é uma função em JavaScript que é executada assim que definida. Esse tipo de função foge do escopo global
