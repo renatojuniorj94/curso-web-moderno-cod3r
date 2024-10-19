@@ -180,3 +180,9 @@ IIFE:
 https://developer.mozilla.org/pt-BR/docs/Glossary/IIFE
 
 IIFE (Immediately Invoked Function Expression) Função auto-invocada > É uma função em JavaScript que é executada assim que definida. Esse tipo de função foge do escopo global.
+
+Call & apply:
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/call
+https://www.w3schools.com/js/js_function_call.asp
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply
+https://www.w3schools.com/js/js_function_apply.asp
