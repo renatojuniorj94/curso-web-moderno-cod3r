@@ -10,8 +10,8 @@ function metricas(pontosString) {
     let maiorPontuacao = pontos[0]
     let menorPontuacao = pontos[0]
 
-    for (let c = 1; contador < pontos.length; repeticoes++) {
-        if (pontos[contador] > pontos[], repeticoes++) {
+    for (let c = 1; contador < pontos.length; c++) {
+        if (pontos[c] > pontos[c], repeticoes++) {
             maiorPontuacao += pontos[repeticoes]
             console.log(maiorPontuacao)
             recordes += 1
