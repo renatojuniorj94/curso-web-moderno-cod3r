@@ -11,12 +11,19 @@ function metricas(pontosString) {
     let menorPontuacao = pontos[0]
 
     for (let c = 1; c < pontos.length; c++) {
-        if (pontos[c] > pontos[c], c++) {
+        if (pontos[c] > maiorPontuacao) {
             recordes += 1
             maiorPontuacao = pontos[c]
-            console.log(maiorPontuacao)
+            
+        } else {
+            menorPontuacao = pontos[c]
+            piorJogo = pontos[c]
+            
         }
     }
+    console.log(maiorPontuacao)
+    console.log('Recordes > ' + recordes)
+    console.log('Pior jogo > ' + piorJogo)
 }
 
 console.log(metricas(pontosString))
