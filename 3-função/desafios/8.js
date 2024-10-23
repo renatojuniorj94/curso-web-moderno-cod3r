@@ -9,21 +9,17 @@ function metricas(pontosString) {
     let piorJogo = 1
     let maiorPontuacao = pontos[0]
     let menorPontuacao = pontos[0]
-
+    
     for (let c = 1; c < pontos.length; c++) {
-        if (pontos[c] > maiorPontuacao) {
-            recordes += 1
+        if (parseInt(pontos[c]) > parseInt(maiorPontuacao)) {
             maiorPontuacao = pontos[c]
-            
-        } else {
+            recordes++
+        } else if (parseInt(pontos[c]) < parseInt(menorPontuacao)) {
             menorPontuacao = pontos[c]
-            piorJogo = pontos[c]
-            
+            piorJogo = c + 1
         }
     }
-    console.log(maiorPontuacao)
-    console.log('Recordes > ' + recordes)
-    console.log('Pior jogo > ' + piorJogo)
+    return console.log(`O atleta quebrou o recorde ${recordes} vezes, e sua pior partida foi a de número ${piorJogo}.`), [recordes, piorJogo]
 }
 
 console.log(metricas(pontosString))
