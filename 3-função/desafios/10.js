@@ -17,3 +17,18 @@ function numeroInteiro(num) {
 numeroInteiro(9)
 numeroInteiro(10)
 numeroInteiro(9.1)
+
+//Correto! :D
+//Maneira feita no curso...
+
+function verificaNumero (numero) {
+    if(numero % 3 == 0){
+        return true
+    }else{
+        return false
+    }
+}
+
+console.log(verificaNumero(3))
+console.log(verificaNumero(2))
+console.log(verificaNumero(150))
