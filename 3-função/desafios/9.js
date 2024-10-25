@@ -16,17 +16,17 @@ function sistemaDeAvaliacao(nota) {
     }
 }
 
-//Função que arredonda multiplo
-function arredondar (nota) {
-    if (nota % 5 > 2) {
-        return nota + (5 - (nota % 5))
+//Função que arredonda para próximo multiplo de 5
+function arredondar(nota) {
+    if (nota % 5 > 2) { //Se o resto da divisão de nota / 5 for maior que 2
+        return nota + (5 - (nota % 5)) 
     } else {
         return nota
     }
 }
 
-classificaAluno(100)
-classificaAluno(30)
-classificaAluno(38)
-classificaAluno(88)
-classificaAluno(61)
+sistemaDeAvaliacao(100)
+sistemaDeAvaliacao(30)
+sistemaDeAvaliacao(38)
+sistemaDeAvaliacao(88)
+sistemaDeAvaliacao(61)
