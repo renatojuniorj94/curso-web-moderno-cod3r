@@ -15,3 +15,16 @@ function fatorial(num) {
 }
 
 console.log(fatorial(10))
+
+//Correto! :D
+//Outra maneira de fazer...
+
+function fatorial (numero) {
+    if(numero == 0){
+        return 1
+    } else {
+        return numero * fatorial(numero - 1)
+    }
+}
+
+console.log(fatorial(10))
