@@ -15,6 +15,8 @@ function calculadora(a, operador, b) {
             return a * b
         case '/':
             return a / b
+        default:
+            return 'Os parâmetros especificados são inválidos!'
     }
 }
 
@@ -22,3 +24,8 @@ console.log(calculadora(5, '+', 3))
 console.log(calculadora(5, '-', 3))
 console.log(calculadora(5, '*', 3))
 console.log(calculadora(5, '/', 3))
+console.log(calculadora(5, '%', 3))
+
+//Correto! :D
+//Maneira feita no curso:
+
