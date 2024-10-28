@@ -6,6 +6,82 @@ informar apenas a seguinte informação (note que não foram exibidas informaç�
 nota(s) de R$ 10. 1 nota(s) de R$ 5. 3 nota(s) de R$ 1.
 */
 
-function caixaEletronico(valorSolicitado) {
-    
+//Função principal
+function caixaEletronico(valorSaque) {
+    let contador100 = 0
+    let contador50 = 0
+    let contador10 = 0
+    let contador5 = 0
+    let contador1 = 0
+    let valorDaNota = quantidadeDeNotas(valorSaque)
+    while (valorSaque >= valorDaNota) {
+        switch(valorDaNota) {
+            case 100:
+                valorSaque -= 100
+                contador100++
+                break
+            case 50:
+                valorSaque -= 50
+                contador50++
+                break
+            case 10:
+                valorSaque -= 10
+                contador10++
+                break
+            case 5:
+                valorSaque -= 5
+                contador5++
+                break
+            case 1:
+                valorSaque -=1
+                contador1++
+        }
+        valorDaNota = quantidadeDeNotas(valorSaque)
+    }
+    return resultado(contador100, contador50, contador10, contador5, contador1)
 }
+
+//Função que calcula a quantidade de notas
+function quantidadeDeNotas(valorSolicitado){
+    if (valorSolicitado >= 100) {
+        return 100
+    } else if (valorSolicitado >= 50) {
+        return 50
+    } else if (valorSolicitado >= 10) {
+        return 10
+    } else if (valorSolicitado >= 5) {
+        return 5
+    } else if (valorSolicitado >= 1) {
+        return 1
+    }
+}
+
+//Função que retorna a resposta final
+function resultado(cem100, cinquenta50, dez10, cinco5, hum1){
+    let resposta = ''
+    
+    if (cem100 > 0) {
+        resposta += `${cem100} notas de R$ 100. `
+    }
+
+    if (cinquenta50 > 0) {
+        resposta += `${cinquenta50} notas de R$ 50. `
+    }
+
+    if (dez10 > 0) {
+        resposta += `${dez10} notas de R$ 10. `
+    }
+
+    if (cinco5 > 0) {
+        resposta += `${cinco5} notas de R$ 5. `
+    }
+
+    if (hum1 > 0) {
+        resposta += `${hum1} notas de R$ 1. `
+    }
+
+    return resposta
+}
+
+console.log(caixaEletronico(1322))
+console.log(caixaEletronico(97))
