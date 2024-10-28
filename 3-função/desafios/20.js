@@ -56,7 +56,7 @@ function quantidadeDeNotas(valorSolicitado){
     }
 }
 
-//Função que retorna a resposta final
+//Função que formata a resposta final
 function resultado(cem100, cinquenta50, dez10, cinco5, hum1){
     let resposta = ''
     
