@@ -11,3 +11,13 @@ function repetir(numeroDeRepetições) {
 }
 
 repetir(50)
+
+//Correto! :D
+//Maneira feita no curso:
+
+function contador () {
+    for (let i = 1; i<=50; i++) {
+        console.log(i);
+    }
+}
+contador()
