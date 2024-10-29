@@ -11,11 +11,12 @@ function mediaAluno(codigo, n1, n2, n3) {
     media.push(n2)
     media.push(n3)
     media.sort((a, b) => a < b ? 1 : -1) //.sort() coloca os itens da variavel media em ordem crescente, a arrow function interna faz uma comparação entre os valores e ordena em ordem descrescente
-    /* console.log(media) */
 
     let mediaPonderada = ((media[0] * 4 + media[1] * 3 + media[2] * 3) / 10).toString().replace(".", ",")
 
-    return `Código do aluno: ${codigo}. Notas: (${n1}), (${n2}) e (${n3}) = Média (${mediaPonderada}). ${mediaPonderada >= 5 ? 'Aprovado' : 'Reprovado'}`
+    return `Código do aluno: ${codigo}. \nNotas: (${n1}), (${n2}) e (${n3}) = Média (${mediaPonderada}). \n${mediaPonderada >= 5 ? 'Aprovado' : 'Reprovado'}`
 }
 
 console.log(mediaAluno(65, 2, 8, 3))
+console.log(mediaAluno(33, 9.2, 7, 8.5))
+console.log(mediaAluno(71, 5, 5, 4.99))
