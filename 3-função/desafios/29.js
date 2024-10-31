@@ -17,3 +17,20 @@ function numerosNoIntervalor(array) {
 
 /* let vetor = [ 7, 8, 9, 10, 11, 12, 16, 17, 18, 19, 20, 21] */
 console.log(numerosNoIntervalor([2,8,10,11,14,19,20,28,31]))
+
+//Correto! :D
+//Maneira feita no curso:
+
+function observarIntervalo (vetor) {
+    qtdNumerosNoIntervalo = 0
+    for (let i = 0; i < vetor.length; i++) {
+        if(vetor[i] >= 10 && vetor[i] <= 20){
+            qtdNumerosNoIntervalo++
+        }
+    }
+    return `${qtdNumerosNoIntervalo} números dentro do intervalo.`
+}
+
+vetor = [ 7, 8, 9, 10, 11, 12, 16, 17, 18, 19, 20, 21]
+
+console.log(observarIntervalo(vetor))
