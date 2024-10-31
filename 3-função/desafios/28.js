@@ -8,7 +8,6 @@ function paresEImpares(...num) {
     let impar = []
     let qtdPar = 0
     let qtdImpar = 0
-    /* let contArray = length(numeros) */
     for (i = 0; i < numeros.length; i++){
         if (numeros[i] % 2 === 0){
             par.push(numeros[i])
@@ -18,7 +17,7 @@ function paresEImpares(...num) {
             qtdImpar += 1
         }
     }
-    return `Pares = ${par} (Total = ${qtdPar}) \nÍmpares = ${impar} (Total = ${qtdImpar})`
+    return `Pares = ${par.sort((a,b) => a - b)} (Total = ${qtdPar}) \nÍmpares = ${impar.sort((a, b) => a - b)} (Total = ${qtdImpar})`
 }
 
 console.log(paresEImpares(8,6,15,689,1,48))
