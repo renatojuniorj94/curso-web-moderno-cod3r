@@ -23,3 +23,23 @@ function acharImpar(n1 = 0, n2 = 100) {
 
 /* acharImpar() */
 acharImpar(19, 0)
+acharImpar(10,10)
+
+//Correto! :D
+//Maneira feita no curso:
+
+function imprimirImpares(inicio = 0, fim = 100) {
+    if (inicio > fim) {
+        inicio = fim + inicio // 22
+        fim = inicio - fim // 22 - 3 = 19
+        inicio = inicio - fim // 22 - 19 = 3        
+    }
+
+    for (let i = inicio; i <= fim; i++) {        
+        if (i % 2 == 1) {
+            console.log(i)
+        }
+    }
+}
+
+imprimirImpares(19, 3)
