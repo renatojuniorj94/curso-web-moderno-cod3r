@@ -44,6 +44,12 @@ function verificacaoDeString(string1, string2) {
     return estaContido
 }
 
+/* Exemplos de Saída
+console.log(verificacaoDeString('abcdf', 'dcba'))
+Retorna false, pois f não está contido em string2.
+
+console.log(verificacaoDeString('flameNgo', 'FlAMenGo'))
+Retorna true, pois todas as letras de ambas as strings estão contidas uma na outra (caso-insensitivo). */
 console.log(verificacaoDeString('abcdf', 'dcba'))
 console.log(verificacaoDeString('flamenGo', 'FlaMEngO'))
 
