@@ -29,4 +29,13 @@ console.log(pessoa.dataNascimento) //01/01/2019
 console.log(Object.keys(pessoa))
 
 //Object.assign (ES6)
-const
+const destino = {a: 1}
+const o1 = {b: 2}
+const o2 = {c: 3, a: 4}
+const obj = Object.assign(destino, o1, o2) 
+console.log(destino) //{ a: 4, b: 2, c: 3 }
+
+Object.freeze(obj)
+obj.c = 1234
+console.log(obj)
+console.log(destino)
