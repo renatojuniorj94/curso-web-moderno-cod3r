@@ -1,6 +1,6 @@
 //Cadeia de protótipos (prototype chain)
 
-Object.prototype.attr0 = 'Z'
+Object.prototype.attr0 = 'Z' //Evitar esse tipo de manipulação
 const avo = { attr1: 'A'} //Avô tem como protótipo Object.prototype
 const pai = {__proto__: avo, attr2: 'B'} //Pai tem como protótipo o avô
 const filho = {__proto__: pai, attr3: 'C'} //Filho tem como protótipo o pai
@@ -33,3 +33,15 @@ const volvo = {
         return `${this.modelo}: ${super.status()}` //'super' funciona como 'this' só que é usado para referenciar protótipos
     }
 }
+
+Object.setPrototypeOf(ferrari, carro)
+Object.setPrototypeOf(volvo, carro)
+
+console.log(ferrari)
+console.log(volvo)
+
+volvo.acelerarMais(100)
+console.log(volvo.status())
+
+ferrari.acelerarMais(350)
+console.log(ferrari.status())
