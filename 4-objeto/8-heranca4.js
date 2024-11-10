@@ -18,3 +18,11 @@ obj2.falar() // Bom dia! Meu nome é Renato
 
 const obj3 = {}
 obj3.__proto__ = meuObjeto.prototype
+obj3.nome = 'Obj3'
+obj3.falar()
+
+//Resumo
+console.log((new meuObjeto).__proto__ === meuObjeto.prototype) // true
+console.log(meuObjeto.__proto__ === Function.prototype)
+console.log(Function.prototype.__proto__ === Object.prototype)
+console.log(Object.prototype.__proto__ === null)
