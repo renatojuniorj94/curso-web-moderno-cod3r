@@ -13,3 +13,22 @@ saudacao('Marizinha')
 //Com arrow function
 const cumprimento = nome => `Olá, ${nome}!`
 console.log(cumprimento('Renato'))
+
+//Correto! :D
+//Outra maneira de fazer...
+
+//Resolução 1
+function cumprimentar(nome) { 
+const saudacao = "Olá" 
+return [saudacao, nome].join(', ').concat("!") 
+}
+
+//Resolução 2
+function cumprimentar(nome) { 
+return "Olá, " + nome + "!" 
+}
+
+//Resolução 3
+function cumprimentar(nome) { 
+return `Olá, ${nome}!` 
+}
