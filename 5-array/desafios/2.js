@@ -5,3 +5,17 @@ Exemplos:
 converterIdadeEmAnosParaDias(25) // retornará 9125
 converterIdadeEmAnosParaDias(70) // retornará 25550
 */
+
+function anosEmDias(idade) {
+    return console.log(idade * 365)
+}
+
+const idadeAnos = function(idade) {
+    return console.log(idade * 365)
+}
+
+const anosParaDias = idade => console.log(idade * 365)
+
+anosEmDias(25)
+idadeAnos(30)
+anosParaDias(70)
