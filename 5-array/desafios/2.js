@@ -19,3 +19,11 @@ const anosParaDias = idade => console.log(idade * 365)
 anosEmDias(25)
 idadeAnos(30)
 anosParaDias(70)
+
+//Correto! :D
+//Outra maneira de fazer...
+
+function converterIdadeEmAnosParaDias(idadeEmAnos) { 
+const diasDoAno = 365 
+return diasDoAno * idadeEmAnos 
+}
