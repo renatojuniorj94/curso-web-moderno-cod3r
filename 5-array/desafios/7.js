@@ -26,3 +26,24 @@ console.log(estaEntre(10, 100, 50)) // retornará true
 console.log(estaEntre(16, 100, 160)) // retornará false 
 console.log(estaEntre(3, 150, 3)) // retornará false 
 console.log(estaEntre(3, 150, 3, true)) // retornará true
+
+//Correto! :D
+//Outra maneira de fazer:
+
+//Resolução 1:
+function estaEntre(minimo, maximo, numero, inclusivo = false) { 
+  if(inclusivo) return numero >= minimo && numero <= maximo 
+ 
+  return numero > minimo && numero < maximo 
+}
+
+//Resolução 2:
+function estaEntre(minimo, maximo, numero, inclusivo = false) { 
+  return inclusivo ? numero >= minimo && numero <= maximo : numero > minimo && numero < maximo 
+}
+
+console.log(estaEntre(1, 50, 100, true))
+console.log(estaEntre(10, 100, 50)) // retornará true 
+console.log(estaEntre(16, 100, 160)) // retornará false 
+console.log(estaEntre(3, 150, 3)) // retornará false 
+console.log(estaEntre(3, 150, 3, true)) // retornará true
