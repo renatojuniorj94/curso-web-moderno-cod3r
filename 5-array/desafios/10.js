@@ -17,3 +17,26 @@ function simboloMais(repetições) {
 simboloMais(2)
 simboloMais(4)
 simboloMais(10)
+
+//Correto! :D
+//Outra maneira de fazer:
+
+//Resolução 1:
+function simboloMais(quantidade) { 
+ let resultado = '' 
+ 
+  for(let i = 0; i < quantidade; i++) 
+    resultado += '+' 
+ 
+  return resultado 
+}
+
+//Resolução 2:
+function simboloMais(quantidade) { 
+  return Array(quantidade).fill('+').join('') 
+}
+
+//Resolução 3:
+function simboloMais(quantidade) { 
+  return "+".repeat(quantidade) 
+}
