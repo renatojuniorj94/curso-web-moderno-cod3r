@@ -20,3 +20,15 @@ const calculoDeSalario = (horasTrabalhadas, valorHora) => console.log(`Salário 
 
 cargaHoraria(150, 40.5)
 calculoDeSalario(150, 40.5)
+
+//Correto! :D
+//Outra maneira de fazer...
+
+function calcularSalarioLiquido(horasTrabalhadas, ganhoPorHora) {
+    const salarioBruto = horasTrabalhadas * ganhoPorHora
+    const salarioLiquido = salarioBruto - salarioBruto * 30 / 100
+
+    return `Salário igual a R$ ${salarioLiquido}`
+}
+
+console.log(calcularSalarioLiquido(150, 40.5))
