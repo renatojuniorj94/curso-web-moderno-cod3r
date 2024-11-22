@@ -5,13 +5,12 @@ isAtivo = true
 console.log(isAtivo)
 
 isAtivo = 1
-console.log(!!isAtivo)
+console.log(!!isAtivo, '\n')
 // ! > Transforma um número em 'false'
 // !! > Transforma um número em 'true'
 
-console.log()
 console.log(!!false)
-console.log(!false)
+console.log(!false, '\n')
 
 //Situações que podemos converter para 'true':
 console.log('Verdadeiros...')
@@ -22,7 +21,7 @@ console.log(!!'texto')
 console.log(!![])
 console.log(!!{})
 console.log(!!Infinity)
-console.log(!!(isAtivo = true))
+console.log(!!(isAtivo = true), '\n')
 
 //Situações que podemos converter para 'false'
 console.log('Falsos...')
