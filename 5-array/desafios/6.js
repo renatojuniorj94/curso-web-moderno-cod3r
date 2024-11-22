@@ -17,11 +17,11 @@ console.log(typeof nome) */
 function inverso(param) {
     const tipo = typeof param
 
-    if(tipo === "boolean") {
+    if (tipo === "boolean") {
         return !param
     }
 
-    if(tipo === "number") {
+    if (tipo === "number") {
         return -param
     } else {
         return `Booleano ou número esperados, mas o parâmetro é do tipo ${tipo}`
@@ -35,3 +35,14 @@ console.log(inverso(-5))
 console.log(inverso('Renato'))
 console.log(inverso({}))
 
+//Correto! :D
+//Outra maneira de fazer...
+
+function inverso(valor) {
+    const tipo = typeof valor
+
+    if (tipo == "boolean") return !valor
+    else if (tipo == "number") return -valor
+    else
+        return `booleano ou número esperados, mas o parâmetro é do tipo ${tipo}`
+}
