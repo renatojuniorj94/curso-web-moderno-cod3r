@@ -13,5 +13,33 @@ function primeiroEUltimoElemento(array = []) {
 }
 
 primeiroEUltimoElemento(teste)
-primeiroEUltimoElemento([7,14,"olá"])
+primeiroEUltimoElemento([7, 14, "olá"])
 primeiroEUltimoElemento([-100, "aplicativo", 16])
+
+//Correto! :D
+//Outra maneira de fazer:
+
+//Resolução 1:
+function receberPrimeiroEUltimoElemento(elementos) {
+    const indiceDoPrimeiroElemento = 0
+    const indiceDoUltimoElemento = elementos.length - 1
+    const primeiroElemento = elementos[indiceDoPrimeiroElemento]
+    const ultimoElemento = elementos[indiceDoUltimoElemento]
+
+    return [primeiroElemento, ultimoElemento]
+}
+
+//Resolução 2:
+function receberPrimeiroEUltimoElemento(elementos) {
+    const primeiroElemento = elementos.shift()
+    const ultimoElemento = elementos.pop()
+
+    return [primeiroElemento, ultimoElemento]
+}
+
+//Resolução 3:
+function receberPrimeiroEUltimoElemento([primeiroElemento, ...elementosRestantes]) {
+    const ultimoElemento = elementosRestantes.pop()
+
+    return [primeiroElemento, ultimoElemento]
+}
