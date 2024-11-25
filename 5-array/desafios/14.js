@@ -15,16 +15,42 @@ objetoParaArray({
 */
 
 function objetoParaArray(objeto) {
-    const resultado = []
-    for (let chave in objeto) {
-        // Adicionar pares [chave, valor] ao array
-        resultado.push([chave, objeto[chave]])
-    }
-    console.log(resultado) // Apenas exibe o resultado
-    return resultado // Retorna o array com os pares
+  const resultado = []
+  for (let chave in objeto) {
+    // Adicionar pares [chave, valor] ao array
+    resultado.push([chave, objeto[chave]])
+  }
+  console.log(resultado) // Apenas exibe o resultado
+  return resultado // Retorna o array com os pares
 }
 
-objetoParaArray({ 
-    nome: "Maria", 
-    profissao: "Desenvolvedora de software" 
+objetoParaArray({
+  nome: "Maria",
+  profissao: "Desenvolvedora de software"
 })
+
+//Correto! :D
+//Outra maneira de fazer:
+
+//Resolução 1:
+function objetoParaArray(objeto) {
+  const resultado = []
+
+  for (let chave in objeto)
+    resultado.push([chave, objeto[chave]])
+
+  return resultado
+}
+
+//Resolução 2:
+function objetoParaArray(objeto) {
+  const chaves = Object.keys(objeto)
+  const resultado = chaves.map(chave => [chave, objeto[chave]])
+
+  return resultado
+}
+
+//Resolução 3:
+function objetoParaArray(objeto) {
+  return Object.entries(objeto)
+}
