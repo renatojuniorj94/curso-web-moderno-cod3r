@@ -7,3 +7,7 @@ Exemplos:
 receberSomenteOsParesDeIndicesPares([1, 2, 3, 4]) // retornará [] 
 receberSomenteOsParesDeIndicesPares([10, 70, 22, 43]) // retornará [10, 22]
 */
+
+function receberSomenteOsParesDeIndicesPares(array) {
+    
+}
