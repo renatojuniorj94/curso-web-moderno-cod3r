@@ -22,3 +22,21 @@ console.log(checarAnoBissexto(2020))
 console.log(checarAnoBissexto(2100))
 console.log(checarAnoBissexto(2000))
 console.log(checarAnoBissexto(1900))
+
+//Correto! :D
+//Outra maneira de fazer:
+
+//Resolução 1:
+function checarAnoBissexto(ano) { 
+  const divisivelPorQuatro = ano % 4 == 0 
+  const divisivelPorCem = ano % 100 == 0 
+  const divisivelPorQuatrocentos = ano % 400 == 0 
+ 
+  return (divisivelPorQuatro && !divisivelPorCem) || divisivelPorQuatrocentos 
+}
+
+//Resolução 2:
+// checa-se indiretamente, verificando se o mês de fevereiro do dado ano tem 29 dias 
+function checarAnoBissexto(ano) { 
+  return new Date(ano, 1, 29).getDate() === 29; 
+}
