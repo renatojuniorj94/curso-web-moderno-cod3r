@@ -14,3 +14,7 @@ despesasTotais([
   {nome: "Macbook Pro", categoria: "Eletrônicos", preco: 30999.90} 
 ]) // retornará 34599.89
 */
+
+function despesasTotais() {
+  
+}
