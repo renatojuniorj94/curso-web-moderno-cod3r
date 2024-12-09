@@ -15,6 +15,6 @@ despesasTotais([
 ]) // retornará 34599.89
 */
 
-function despesasTotais() {
+function despesasTotais(object) {
   
 }
