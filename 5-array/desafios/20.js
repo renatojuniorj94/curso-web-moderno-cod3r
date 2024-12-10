@@ -27,3 +27,13 @@ const areaDoTriangulo2 = (n1, n2) => {
 console.log(areaDoTriangulo2(10, 15))
 console.log(areaDoTriangulo2(7, 9))
 console.log(areaDoTriangulo2(9.25, 13.1))
+
+//Correto! :D
+//Outra maneira de fazer:
+
+//Resolução:
+function areaDoTriangulo(base, altura) { 
+  const area = (base * altura) / 2 
+ 
+  return area.toFixed(2) // irá arredondar para manter 2 casas decimais 
+}
