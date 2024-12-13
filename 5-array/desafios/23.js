@@ -15,6 +15,12 @@ function contarPalavra(frase) {
 console.log(contarPalavra("Sou uma frase"))
 console.log(contarPalavra("Me divirto aprendendo a programar"))
 
+//Arrow function
+const contarPalavra2 = (frase) => frase.split(' ').length
+
+console.log(contarPalavra2("Sou uma frase"))
+console.log(contarPalavra2("Me divirto aprendendo a programar"))
+
 //Correto! :D
 //Outra maneira de fazer:
 
