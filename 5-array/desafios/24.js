@@ -20,3 +20,22 @@ const contarCaractere2 = (caractere, frase) => frase.split(caractere).length - 1
 
 console.log(contarCaractere2("r", "A sorte favorece os audazes"))
 console.log(contarCaractere2("c", "Conhece-te a ti mesmo"))
+
+//Correto! :D
+//Outra maneira de fazer:
+
+//Resolução 1:
+function contarCaractere(caractereBuscado, frase) { 
+  let contador = 0 
+ 
+  for (let i = 0; i < frase.length; i++) 
+    if (frase.charAt(i) === caractereBuscado) 
+      contador++ 
+ 
+  return contador 
+}
+
+//Resolução 2:
+function contarCaractere(caractereBuscado, frase) { 
+  return [...frase].filter(caractere => caractere === caractereBuscado).length 
+}
