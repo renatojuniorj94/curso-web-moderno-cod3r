@@ -24,3 +24,22 @@ function buscarPalavraSemelhante(palavra, array) {
 console.log(buscarPalavraSemelhante("pro", ["programação", "mobile", "profissional"]))
 console.log(buscarPalavraSemelhante("java", ["javascript", "java", "c++"]))
 console.log(buscarPalavraSemelhante('AsI', ["Argentina", "Brasil", "Chile", "Uruguai"]))
+
+//Correto! :D
+//Outra maneira de fazer:
+
+//Resolução 1?
+function buscarPalavrasSemelhantes(inicio, palavras) { 
+  const resultado = [] 
+ 
+  for (let palavra of palavras) 
+    if (palavra.includes(inicio)) 
+      resultado.push(palavra) 
+ 
+  return resultado 
+}
+
+//Resolução 2:
+function buscarPalavrasSemelhantes(inicio, palavras) { 
+  return palavras.filter(palavra => palavra.includes(inicio)) 
+}
