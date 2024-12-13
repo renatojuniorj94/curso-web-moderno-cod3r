@@ -14,3 +14,12 @@ function contarPalavra(frase) {
 
 console.log(contarPalavra("Sou uma frase"))
 console.log(contarPalavra("Me divirto aprendendo a programar"))
+
+//Correto! :D
+//Outra maneira de fazer:
+
+//Resolução:
+function contarPalavras(frase){ 
+  const palavras = frase.split(" ") 
+  return palavras.length 
+}
