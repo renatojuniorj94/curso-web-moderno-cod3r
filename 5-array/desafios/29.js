@@ -4,3 +4,11 @@ Exemplos:
 segundoMaior([12, 16, 1, 5]) // retornará 12 
 segundoMaior([8, 4, 5, 6]) // retornará 6
 */
+
+function segundoMaior(array) {
+
+}
+
+const segundoMaior2 = () => 3 * 3
+
+console.log(segundoMaior2())
