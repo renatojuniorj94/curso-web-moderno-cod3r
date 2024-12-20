@@ -9,6 +9,7 @@ function segundoMaior(array) {
     
 }
 
+//Arrow function
 const segundoMaior2 = (array) => 3 * 3
 
 console.log(segundoMaior2([2, 7, 4, 12]))
