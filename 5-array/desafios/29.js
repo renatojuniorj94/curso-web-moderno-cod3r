@@ -4,13 +4,3 @@ Exemplos:
 segundoMaior([12, 16, 1, 5]) // retornará 12 
 segundoMaior([8, 4, 5, 6]) // retornará 6
 */
-
-function segundoMaior(array) {
-    
-}
-
-//Arrow function
-const segundoMaior2 = (array) => 3 * 3
-
-console.log(segundoMaior2([2, 7, 4, 12]))
-console.log(segundoMaior2([2, 7, 4, 12]))
