@@ -28,8 +28,3 @@ function recerberMelhorEstudante(estudantes) {
  
   return melhorEstudante 
 }
-
-const chav = 0, 
-    valo = 1 
-
-console.log(typeof valo)
