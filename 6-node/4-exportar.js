@@ -20,3 +20,4 @@ console.log(module.exports)
 
 //Se precisar atribuir um novo objeto para ser exportado:
 module.exports = {publico: true}
+
