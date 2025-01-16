@@ -1,17 +1,12 @@
-const url = 'http://files.cod3r.com.br/curso-js/funcionarios.json'
-const axios = require('axios')
-
-axios.get(url).then(response => {
-    const funcionarios = response.data
-    console.log(funcionarios)
-})
-
 /* 
 Desafio:
-Exibir mulher chinesa com o menor salario.
+Exibir mulher chinesa com o menor salario em um arquivo json.
 dica:
 Podemos usar map, filter e reduce.
 */
+
+const url = 'http://files.cod3r.com.br/curso-js/funcionarios.json'
+const axios = require('axios')
 
 async function encontrarMenorSalario() {
     try {
@@ -37,3 +32,25 @@ async function encontrarMenorSalario() {
 
 // Chamar a função
 encontrarMenorSalario();
+
+//Correto! :D
+//Resolução do curso:
+
+const chineses = funcionarios => funcionarios.pais === 'China'
+const mulheres = funcionarios => funcionarios.genero === 'F'
+const menorSalario = (funcionario, funcionarioAtual) => {
+    return funcionario.salario < funcionarioAtual.salario ? funcionario : funcionarioAtual
+}
+
+axios.get(url).then(response => {
+    const funcionarios = response.data
+    /* console.log(funcionarios) */
+
+    //mulher chinesa com menor salário?
+    const func = funcionarios
+        .filter(chineses)
+        .filter(mulheres)
+        .reduce(menorSalario)
+
+    console.log(func)
+})
