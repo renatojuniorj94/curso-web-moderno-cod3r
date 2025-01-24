@@ -3,7 +3,7 @@ const axios = require('axios')
 
 axios.get(url).then(response => {
     const funcionarios = response.data
-    console.log(funcionarios)
+    //console.log(funcionarios)
 })
 
 /* 
@@ -28,8 +28,8 @@ async function encontrarMenorSalario() {
         });
 
         // Exibir o resultado
-        console.log("A mulher chinesa com o menor salário é:");
-        console.log(mulherComMenorSalario);
+        //console.log("A mulher chinesa com o menor salário é:");
+        //console.log(mulherComMenorSalario);
     } catch (error) {
         console.error("Erro ao obter os dados:", error.message);
     }
