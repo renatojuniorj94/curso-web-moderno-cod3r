@@ -39,5 +39,5 @@ app.delete('/produtos/:id', (req, res, next) => {
 })
 
 app.listen(porta, () => {
-    console.log(`Servidor está executando na porta ${porta}.`)
+    console.log(`Servidor está executando na porta http://localhost:${porta}.`)
 })
