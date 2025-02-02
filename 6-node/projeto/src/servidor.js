@@ -7,11 +7,6 @@ const bancoDeDados = require('./bancoDeDados')
 
 app.use(bodyParser.urlencoded({ extended: true }))
 
-/* app.get('/produtos', (req, res, next) => {
-    console.log('Middleware 1...')
-    next()
-}) */
-
 app.get('/produtos', (req, res, next) => {
     //Antes > res.send({ nome: 'Notebook', preco: 123.45}) //O metódo send vai converter o objeto para JSON
     res.send(bancoDeDados.getProdutos())
