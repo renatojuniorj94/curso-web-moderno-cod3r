@@ -1,0 +1,98 @@
+1️⃣ O que esse código faz?
+Esse código cria uma API REST simples usando Express. Ele gerencia um banco de dados em memória (provavelmente definido no arquivo bancoDeDados.js) e permite:
+✅ Listar todos os produtos (GET /produtos)
+✅ Obter um produto específico (GET /produtos/:id)
+✅ Adicionar um novo produto (POST /produtos)
+✅ Atualizar um produto (PUT /produtos/:id)
+✅ Excluir um produto (DELETE /produtos/:id)
+
+2️⃣ Explicação linha por linha
+🔹 Definição da porta
+const porta = 3003
+Aqui, a variável porta define a porta em que o servidor vai rodar. No caso, será a 3003.
+
+🔹 Importação de módulos
+const express = require('express')
+const app = express()
+const bodyParser = require('body-parser')
+const bancoDeDados = require('./bancoDeDados')
+express: Framework para criar o servidor web.
+app: Instância do Express.
+bodyParser: Middleware que processa os dados do corpo da requisição (necessário para POST e PUT).
+bancoDeDados: Importa um módulo externo (bancoDeDados.js) que gerencia os produtos.
+
+🔹 Configuração do bodyParser
+app.use(bodyParser.urlencoded({ extended: true }))
+Isso permite que o Express interprete os dados enviados via formulário (application/x-www-form-urlencoded), como quando usamos um POST com campos de formulário.
+
+3️⃣ Rotas da API
+Agora, vamos entender cada rota.
+
+📌 Listar todos os produtos (GET /produtos)
+app.get('/produtos', (req, res, next) => {
+    res.send(bancoDeDados.getProdutos())
+})
+O cliente faz um GET /produtos.
+A função getProdutos() do bancoDeDados retorna todos os produtos.
+O res.send() envia os produtos em formato JSON para o cliente.
+
+📌 Buscar um produto específico (GET /produtos/:id)
+app.get('/produtos/:id', (req, res, next) => {
+    res.send(bancoDeDados.getProduto(req.params.id))
+})
+O cliente faz um GET /produtos/2 (por exemplo).
+O req.params.id captura o id passado na URL.
+O getProduto(id) retorna o produto correspondente.
+
+📌 Adicionar um novo produto (POST /produtos)
+app.post('/produtos', (req, res, next) => {
+    const produto = bancoDeDados.salvarProduto({
+        nome: req.body.nome,
+        preco: req.body.preco
+    })
+    res.send(produto)
+})
+O cliente faz um POST /produtos enviando { "nome": "Teclado", "preco": 99.90 }.
+O req.body contém os dados enviados.
+O produto é salvo no banco de dados usando salvarProduto().
+O res.send(produto) retorna o produto criado como resposta.
+
+📌 Atualizar um produto (PUT /produtos/:id)
+app.put('/produtos/:id', (req, res, next) => {
+    const produto = bancoDeDados.salvarProduto({
+        id: req.params.id,
+        nome: req.body.nome,
+        preco: req.body.preco
+    })
+    res.send(produto)
+})
+O cliente faz um PUT /produtos/1 enviando { "nome": "Monitor", "preco": 500 }.
+O req.params.id captura o id do produto a ser atualizado.
+O req.body contém os novos dados do produto.
+O salvarProduto() atualiza o produto no banco de dados.
+
+📌 Excluir um produto (DELETE /produtos/:id)
+app.delete('/produtos/:id', (req, res, next) => {
+    const produto = bancoDeDados.excluirProdutos(req.params.id)
+    res.send(produto)
+})
+O cliente faz um DELETE /produtos/2.
+O req.params.id captura o id do produto a ser deletado.
+O excluirProdutos(id) remove o produto do banco de dados.
+O res.send(produto) retorna os dados do produto removido.
+
+4️⃣ Rodando o servidor
+app.listen(porta, () => {
+    console.log(`Servidor está executando na porta ${porta}.`)
+})
+O app.listen(porta, callback) inicia o servidor.
+A mensagem Servidor está executando na porta 3003. aparece no console.
+📌 Resumo rápido
+✔️ Criamos um servidor com Express
+✔️ Usamos body-parser para processar requisições POST/PUT
+✔️ Temos 5 rotas REST (GET, POST, PUT, DELETE)
+✔️ Os dados dos produtos são manipulados por bancoDeDados.js
+
+Agora você pode testar a API usando o Postman, Insomnia ou o comando curl no terminal! 🚀
+
+Ficou mais claro agora? 😊
