@@ -1,7 +1,7 @@
 //Sem promise...
 
 const http = require('http')
-const { toLower, toUpper } = require('lodash')
+/* const { toLower, toUpper } = require('lodash') */
 const getTurma = (letra, callback) => {
     const letraMaiuscula = letra.toUpperCase()
     const url = `http://files.cod3r.com.br/curso-js/turma${letraMaiuscula}.json`
