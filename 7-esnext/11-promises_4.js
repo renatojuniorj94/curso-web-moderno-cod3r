@@ -24,6 +24,7 @@ function gerarVariosNumeros() {
 }
 
 console.time('promise')
+
 gerarVariosNumeros()
     .then(numeros => console.log(numeros))
     .then(() => {
