@@ -1,17 +1,21 @@
 <h1>Projeto</h1>
 <ul class="tree">
     <li>
-        backend
+        <button id="esconder" onclick="esconder()">
+            backend
+        </button>
         <ul>
             <li>
-                App
+                <button id="esconder" onclick="esconder()">
+                    App
+                </button>
                 <ul>
                     <li>produto.js</li>
                     <li>usuario.js</li>
                     <li>venda.js</li>
                 </ul>
             </li>
-            <li>
+            <li id="esconder" onclick="esconder()">
                 config
                 <ul>
                     <li>banco.js</li>
@@ -21,10 +25,10 @@
             </li>
         </ul>
     </li>
-    <li>
+    <li id="esconder" onclick="esconder()">
         frontend
         <ul>
-            <li>
+            <li id="esconder" onclick="esconder()">
                 public
                 <ul>
                     <li>app.css</li>
@@ -37,9 +41,15 @@
 </ul>
 
 <link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+<style>
 
-<!-- Desafio > Ao clicar em uma lista ela esconder os seus itens filhos -->
+</style>
+
+<!-- Desafio > Ao clicar em uma lista ela esconder os seus itens filhos (backend, frontend, app, config, public) -->
 
 <script>
-    
+    function esconder() {}
+    function exibir() {}
 </script>
+
+<!-- parte 1 -->
