@@ -43,11 +43,10 @@
 
 <script>
     document.querySelectorAll('[wm-folder]').forEach(folder => {
-        folder.onclick = function (e) {
+        folder.onclick = function() {
             const ul = folder.nextElementSibling
-            const d = ul.style.display
+            const d /* 'd' faz referencia a display */ = ul.style.display
             ul.style.display = d === 'none' ? 'block' : 'none'
         }
     })
-
 </script>
