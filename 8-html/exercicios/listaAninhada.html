@@ -1,35 +1,32 @@
 <h1>Projeto</h1>
 <ul class="tree">
     <li>
-        <button id="esconder" onclick="esconder()">
-            backend
-        </button>
-        <ul>
-            <li>
-                <button id="esconder" onclick="esconder()">
-                    App
-                </button>
+        <span onclick="toggleFilhos()">backend</span>
+        <ul id="pai">
+            <li class="filho">
+                <span onclick="toggleFilhos()">App</span>
                 <ul>
-                    <li>produto.js</li>
-                    <li>usuario.js</li>
-                    <li>venda.js</li>
+                    <li class="filho">produto.js</li>
+                    <li class="filho">usuario.js</li>
+                    <li class="filho">venda.js</li>
                 </ul>
             </li>
-            <li id="esconder" onclick="esconder()">
-                config
-                <ul>
+            <li class="filho">
+                <span onclick="toggleFilhos()">Config</span>
+                <ul class="filho">
                     <li>banco.js</li>
                     <li>rotas.js</li>
                     <li>servidor.js</li>
                 </ul>
             </li>
         </ul>
+
     </li>
-    <li id="esconder" onclick="esconder()">
-        frontend
-        <ul>
-            <li id="esconder" onclick="esconder()">
-                public
+    <li>
+        <span onclick="toggleFilhos()">frontend</span>
+        <ul id="pai">
+            <li class="filho">
+                <span onclick="toggleFilhos()">public</span>
                 <ul>
                     <li>app.css</li>
                     <li>app.js</li>
@@ -48,8 +45,24 @@
 <!-- Desafio > Ao clicar em uma lista ela esconder os seus itens filhos (backend, frontend, app, config, public) -->
 
 <script>
-    function esconder() {}
-    function exibir() {}
-</script>
+    /* function esconder() {
+        let filhos = document.querySelectorAll("#pai .filho"); // Seleciona os filhos do #pai
+            filhos.forEach(filho => filho.style.display = "none"); // Esconde cada filho
+    }
 
-<!-- parte 1 -->
+    function exibir() {
+        let filhos = document.querySelectorAll("#pai .filho");
+            filhos.forEach(filho => filho.style.display = "block"); // Mostra cada filho
+    } */
+
+    function toggleFilhos() {
+        let filhos = document.querySelectorAll("#pai .filho");
+        filhos.forEach(filho => {
+            if (filho.style.display === "none") {
+                filho.style.display = "block"; // Mostra os filhos
+            } else {
+                filho.style.display = "none"; // Esconde os filhos
+            }
+        });
+    }
+</script>
