@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+ <html lang="pt-br">
+ 
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Desafio slide</title>
+     <style>
+         * {
+             margin: 0;
+             padding: 0;
+             box-sizing: border-box;
+         }
+ 
+         /* Container do slider */
+         .slider-container {
+             width: 100vw;
+             height: 100vh;
+             overflow: hidden;
+             position: relative;
+             display: flex;
+             align-items: center;
+         }
+ 
+         /* Slides organizados horizontalmente */
+         .slides {
+             display: flex;
+             width: 1000vw; /* 10 slides (5 originais + 5 duplicados) */
+             animation: slide 15s linear infinite;
+         }
+ 
+         /* Cada slide ocupa 100% da tela */
+         .slide {
+             width: 100vw;
+             height: 30vh;
+             flex-shrink: 0;
+         }
+ 
+         /* Imagens ocupam a tela toda */
+         .slide img {
+             width: 100%;
+             height: 100%;
+             object-fit: cover;
+         }
+ 
+         /* Animação contínua */
+         @keyframes slide {
+             from {
+                 transform: translateX(0);
+             }
+             to {
+                 transform: translateX(-500vw); /* Move todos os 5 slides originais */
+             }
+         }
+     </style>
+ </head>
+ 
+ <body>
+ 
+     <div class="slider-container">
+         <div class="slides">
+             <!-- Primeira sequência de imagens -->
+             <div class="slide">
+                 <img src="http://files.cod3r.com.br/curso-web/imagem1.jpg" alt="Muro da cidade">
+             </div>
+             <div class="slide">
+                 <img src="http://files.cod3r.com.br/curso-web/imagem2.gif" alt="Intro Cod3r">
+             </div>
+             <div class="slide">
+                 <img src="http://files.cod3r.com.br/curso-web/imagem3.png" alt="Rio de Janeiro">
+             </div>
+             <div class="slide">
+                 <img src="http://files.cod3r.com.br/curso-web/avatar.jpg" alt="Avatar">
+             </div>
+             <div class="slide">
+                 <img src="http://files.cod3r.com.br/curso-web/imagem4.jpg" alt="Cidade">
+             </div>
+         </div>
+     </div>
+ 
+ </body>
+ 
+ </html>
