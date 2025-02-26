@@ -1,9 +1,10 @@
 <h1>Formulário</h1>
 
-<form action="http://localhost:3003/usuarios" method="post">
-    <input type="text" name="nome">
-    <input type="password" name="senha">
-    <textarea name=bio" cols="30" rows="10"></textarea>
+<form method="post">
+    <input type="hidden" name="id" value="3">
+    <input type="text" name="nome" placeholder="Nome">
+    <input type="password" name="senha" placeholder="Senha">
+    <textarea name="bio" cols="30" rows="10" placeholder="Biografia"></textarea>
     <div>
         <input type="radio" name="tipo" value="Admin">Admin
         <input type="radio" name="tipo" value="regular">Regular
@@ -28,7 +29,8 @@
         <option value="c">C</option>
     </select>
 
-    <button>Incluir</button>
+    <button type="submit" formaction="http://localhost:3003/usuarios/3">Alterar</button>
+    <button type="submit" formaction="http://localhost:3003/usuarios">Incluir</button>
 </form>
 
 <style>
