@@ -20,7 +20,7 @@
         margin: 10px 0px;
     }
 
-    .progresso > div {
+    .progresso>div {
         background-color: rgb(102, 189, 102);
         color: white;
         height: 100%;
@@ -31,6 +31,7 @@
 
 <script>
     const video = document.querySelector('#meuVideo')
+    const prog = video.currentTime
 
     function iniciar() {
         video.play()
@@ -41,9 +42,9 @@
         video.pause()
     }
 
-    function barraProgresso() {
-        const prog = document.querySelector('.progresso > div')
-        
-
+    const exibirProgresso = function () { document.querySelector('.progresso').innerHTML = video.ontimeupdate() 
     }
+
+    video.exibirProgresso
+
 </script>
