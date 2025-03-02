@@ -1,4 +1,4 @@
-<video id="meuVideo" width="800" height="450" controlslist="nodownload">
+<video id="meuVideo" width="800" height="450" controlslist="nodownload" ontimeupdate="progressoVideo(this)">
     <source src="http://files.cod3r.com.br/curso-web/video.mp4" type="video/mp4">
     Seu browser não suporta a tag vídeo.
 </video>
@@ -31,20 +31,24 @@
 
 <script>
     const video = document.querySelector('#meuVideo')
-    const prog = video.currentTime
+    const duracao = video.duration //Pegando duração total do vídeo
+    const progresso = document.querySelector('.progresso > div')
+
 
     function iniciar() {
         video.play()
-        video.muted = true //Iniciando vídeo sem audio
+        //video.muted = true //Iniciando vídeo sem audio
     }
 
     function parar() {
         video.pause()
     }
 
-    const exibirProgresso = function () { document.querySelector('.progresso').innerHTML = video.ontimeupdate() 
+    //Função para evento ontimeupdate
+    function progressoVideo(event) {
+        const tempoAtual = video.currentTime
+        const divisao = tempoAtual / 
+        progresso.style.width = `${tempoAtual}%`
     }
-
-    video.exibirProgresso
 
 </script>
