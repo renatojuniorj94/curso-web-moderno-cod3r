@@ -31,9 +31,18 @@
 
 <script>
     const video = document.querySelector('#meuVideo')
-    const duracao = video.duration //Pegando duração total do vídeo
+
+    //Pegando a duracão total do vídeo  
+    let duracao = 0
+    video.addEventListener('loadedmetadata', () => {
+        duracao = video.duration;
+    });
+
     const progresso = document.querySelector('.progresso > div')
 
+    //Selecionando .progresso
+    const selClassProg = document.querySelector('.progresso')
+    const largWidth = parseFloat(getComputedStyle(selClassProg).width)
 
     function iniciar() {
         video.play()
@@ -45,10 +54,12 @@
     }
 
     //Função para evento ontimeupdate
-    function progressoVideo(event) {
+    function progressoVideo() {
         const tempoAtual = video.currentTime
-        const divisao = tempoAtual / 
-        progresso.style.width = `${tempoAtual}%`
+        /* tempoAtual / duracao gera um valor entre 0 e 1 (porcentagem da reprodução).
+        Multiplicamos por 100 para converter para %, que pode ser aplicado no CSS. */
+        const porcentagem = (tempoAtual / duracao) * 100
+        progresso.style.width = `${porcentagem}%`
     }
 
 </script>
