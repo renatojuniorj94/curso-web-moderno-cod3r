@@ -204,3 +204,6 @@ div + p (adjacente sibling)
 div ~ p (general sibling)
 div > p (child)
 div + p (ddescendant)
+
+Especificidade CSS:
+https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_cascade/Specificity
