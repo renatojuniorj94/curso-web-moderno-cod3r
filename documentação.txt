@@ -186,3 +186,21 @@ https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects
 https://www.w3schools.com/js/js_function_call.asp
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply
 https://www.w3schools.com/js/js_function_apply.asp
+
+Seletores CSS:
+https://www.w3schools.com/cssref/css_selectors.php
+https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_selectors
+
+* (Universal)
+nome do elemento
+.class
+#id
+[atributo]
+:pseudo-classe
+::pseudo-elemento
+
+Combinar seletores:
+div + p (adjacente sibling)
+div ~ p (general sibling)
+div > p (child)
+div + p (ddescendant)
