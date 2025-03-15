@@ -207,3 +207,12 @@ div + p (ddescendant)
 
 Especificidade CSS:
 https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_cascade/Specificity
+
+Display CSS:
+https://www.w3schools.com/cssref/pr_class_display.php
+https://developer.mozilla.org/pt-BR/docs/Web/CSS/display
+
+Valores:
+block;
+inline;
+inline-block;
