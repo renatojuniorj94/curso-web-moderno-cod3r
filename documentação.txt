@@ -216,3 +216,23 @@ Valores:
 block;
 inline;
 inline-block;
+
+Unidades CSS:
+https://www.w3schools.com/cssref/css_units.php
+
+Absolutos:
+px
+cm
+mm
+
+Relativas:
+
+- Viewport
+vh
+vw
+vmin
+vmax
+
+- font
+rem 
+em
