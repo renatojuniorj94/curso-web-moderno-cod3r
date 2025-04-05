@@ -6,7 +6,9 @@
     <title>Desafio Card</title>
     <style>
         .curso {
-            float: left; /* os elementos começam a se alinhar pela esquerda */
+            /* float: left; */ /* os elementos começam a se alinhar pela esquerda */
+            display: inline-block;
+            vertical-align: top;
             font-family: verdana, sans-serif;
             border: solid 1px #ccc;
             box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3);
@@ -38,7 +40,16 @@
             padding: 10px;
         }
 
-        .preco-de
+        .preco-de {
+            text-decoration: line-through;
+            color: firebrick;
+        }
+
+        .preco-por {
+            color: green;
+            font-weight: bold;
+            font-size: 1.4em;
+        }
     </style>
 </head>
 
