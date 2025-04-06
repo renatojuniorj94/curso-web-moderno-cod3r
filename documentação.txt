@@ -236,3 +236,64 @@ vmax
 - font
 rem 
 em
+
+Flex box:
+Flex container (Tudo que marcamos como "display: flex;")
+
+                       Cross Axis (vertical)
+                            ↑
+                            │
+                            │
+   Cross Size               │
+        ↕                  │
+   ┌───────────────────────────────────────────┐
+   │                                           │
+   │  ┌────────┐ ┌────────┐ ┌────────┐         │
+   │  │  item  │ │  item  │ │  item  │         │
+   │  └────────┘ └────────┘ └────────┘         │
+   │                                           │
+   └───────────────────────────────────────────┘
+        ←──────────── Main Axis ────────────→
+                   ↔
+                Main Size
+
+Legenda:
+Main Axis: Direção principal dos itens (horizontal por padrão).
+
+Main Size: Comprimento total do container na direção principal.
+
+Cross Axis: Direção perpendicular à main (vertical por padrão).
+
+Cross Size: Altura total do container (no eixo cross).
+
+**flex-direction: column**
+
+                    Cross Axis (horizontal)
+       ←────────────────────────────────→
+                   ↔
+               Cross Size
+        ┌───────────────┐
+        │               │
+        │   Main Axis   ↓
+        │   ┌────────┐  │
+        │   │  item  │  │
+        │   └────────┘  │
+        │   ┌────────┐  │
+        │   │  item  │  │
+        │   └────────┘  │
+        │   ┌────────┐  │
+        │   │  item  │  │
+        │   └────────┘  │
+        │               │
+        └───────────────┘
+             ↑
+         Main Size
+
+Legenda adaptada:
+Main Axis: Vertical, pois flex-direction: column.
+
+Main Size: Altura total do container.
+
+Cross Axis: Horizontal agora, perpendicular ao main.
+
+Cross Size: Largura total do container.
