@@ -297,3 +297,5 @@ Main Size: Altura total do container.
 Cross Axis: Horizontal agora, perpendicular ao main.
 
 Cross Size: Largura total do container.
+
+Seguimentação flexbox
