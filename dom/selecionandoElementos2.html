@@ -21,10 +21,22 @@
             document.querySelectorAll(seletor).forEach(e => e.classList.remove('destaque'))
 
         selecionar('div')
+
         deselecionar('*') //Usando seletor universal
         selecionar('.terceiro.ultimo')
+
         deselecionar('*')
         selecionar(':not(#primeiro)') //Todos que não tem id 'primeiro' serão selecionados
+
+        deselecionar('*')
+        selecionar(':nth-child(1)') //Ele vai selecionar '#primeiro' por ser o primeiro filho da tag 'body', e também vai selecionar '.terceiro.ultimo' dentro da tag 'span' que é o primeiro filho da tag 'div'
+
+        deselecionar('*')
+        selecionar('div:nth-of-type(1)') //Selecionando o primeiro elemento, nesse caso será a tag 'div'
+        selecionar('span:nth-of-type(1)') //Selecionando o primeiro elemento, nesse caso será a tag 'span'
+
+        deselecionar('*')
+        selecionar('[wb-attrib]') //Selecionando um atributo
     </script>
 </body>
 </html>
