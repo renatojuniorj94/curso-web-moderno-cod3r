@@ -18,12 +18,17 @@
         // ...
 
         const img = document.querySelector('img')
-        console.log('getAttribute', img.getAttribute('src'))
+        console.log('getAttribute', img.getAttribute('src')) //Nome do atributo
         console.log('src', img.src)
         console.log('[src]', img['src'])
         console.log('alt', img.alt)
 
-        
+        console.log('Elemento "img".................')
+        console.log('NodeType', img.nodeType)
+        console.log('NodeName', img.nodeName)
+
+        const src = img.getAttributeNode('src') //Nó do atributo
+        console.log('atributo "src"................')
     </script>
 </body>
 
