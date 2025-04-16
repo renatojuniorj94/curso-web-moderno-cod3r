@@ -33,7 +33,11 @@
         console.log('NodeName', src.nodeName)
         console.log('NodeValue', src.nodeValue)
 
-        
+        const link = document.querySelector('a')
+        console.log('Elemento "a"..................')
+        console.log('href', link.href)
+        console.log('firstChild.nodeType', link.firstChild.nodeType)
+        link.firstChild.nodeValue = 'Novo texto'
     </script>
 </body>
 
