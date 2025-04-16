@@ -29,6 +29,16 @@
         lista.setAttribute('status', 'aberto')
         lista.removeAttribute('destino')
         console.log(lista.dataset)
+        console.log(lista.dataset.urgencia)
+        lista.dataset.urgencia = 4
+        console.log(lista.dataset.urgencia)
+        console.log(lista.getAttribute('data-urgencia'))
+
+        //cuidado
+        const label = document.querySelector('label')
+        console.log(label.for) //undefined
+        console.log(label.htmlFor) //Com notação ponto temos que usar htmlFor
+        console.log(label.getAttribute('for'))
     </script>
 </body>
 
