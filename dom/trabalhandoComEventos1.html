@@ -9,9 +9,21 @@
 
 <body class="conteudo exercicio">
     <div>
-        <a href="https://google.com.br">Google</a>
+        <!-- onclick="navegarEm5s(event)" > Vantagem de usar dentro da tag é que o evento fica explicito para quem está lendo o código. A desvantagem é que você perde a flexibilidade -->
+        <a href="https://google.com.br" >Google</a> <!-- obrigatorio usar 'event' e não 'evento'-->
     </div>
     <script>
         // ...
+
+        function navegarEm5s(evento) {
+            evento.preventDefault() //Previne que o comportamento padrão ocorra
+            console.log('Saindo em 5 segundos...')
+            setTimeout(() => {
+                const link = evento.target
+                window.location.href = link.href //substituindo url na barra do navegador
+            }, 5000)
+        }
+
+        
     </script>
 </body>
