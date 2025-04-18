@@ -10,7 +10,7 @@
 <body class="conteudo exercicio">
     <div>
         <!-- onclick="navegarEm5s(event)" > Vantagem de usar dentro da tag é que o evento fica explicito para quem está lendo o código. A desvantagem é que você perde a flexibilidade -->
-        <a href="https://google.com.br" >Google</a> <!-- obrigatorio usar 'event' e não 'evento'-->
+        <a esperar-um-pouco href="https://google.com.br" >Google</a> <!-- obrigatorio usar 'event' e não 'evento'-->
     </div>
     <script>
         // ...
@@ -24,6 +24,11 @@
             }, 5000)
         }
 
-        
+        /* const a = document.querySelector('a')
+        a.onclick = navegarEm5s */
+
+        //Não é correto usarmos eventos em cima de classes ou id. Os mesmos devem ser usados para estilo. Para isso usamos atributos ([attr]), pois o mesmo é ignorado pelo browser.
+        const a = document.querySelector('[esperar-um-pouco]')
+        a.onclick = navegarEm5s
     </script>
 </body>
