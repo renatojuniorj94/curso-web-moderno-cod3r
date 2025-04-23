@@ -100,7 +100,9 @@ function passarinho(alturaJogo) {
     this.setY(alturaJogo / 2)
 }
 
-const parede = new BarreirasObj(700, 1200, 200, 400)
+//const parede = new BarreirasObj(700, 1200, 200, 400)
+const parede = new BarreirasObj(700, 1200, 200, 400, () => {})
+
 const passaro = new passarinho(700)
 const areaDoJogo = document.querySelector('[wm-flappy]')
 
