@@ -36,7 +36,7 @@ function parDeBarreiras(altura, abertura, x) {
     }
 
     this.getX = () => parseInt(this.elemento.style.left.split('px')[0])
-    this.setX = x => this.elemento.style.left = `${x}px`
+    this.setX = x => this.elemento.style.left = `${x}px`   
     this.getLargura = () => this.elemento.clientWidth
 
     this.sortearAbertura()
@@ -72,7 +72,7 @@ function Barreiras(altura, largura, abertura, espaco, notificarPonto) {
     }
 }
 
-function passaro(alturaJogo) {
+function passarinho(alturaJogo) {
     let voando = false
 
     this.elemento = novoElemento('img', 'passaro')
@@ -100,13 +100,13 @@ function passaro(alturaJogo) {
     this.setY(alturaJogo / 2)
 }
 
-const barreiras = new Barreiras(700, 1200, 200, 400)
-const passaro = new passaro(700)
+const barreira = new Barreiras(700, 1200, 200, 400)
+const passaro = new passarinho(700)
 const areaDoJogo = document.querySelector('[wm-flappy]')
 
 areaDoJogo.appendChild(passaro.elemento)
-arreiras.pares.forEach(par => areaDoJogo.appendChild(par.elemento))
+Barreiras.pares.forEach(par => areaDoJogo.appendChild(par.elemento))
 setInterval(() => {
     Barreiras.animar()
-    passaro.animar()
+    passarinho.animar()
 }, 20)
