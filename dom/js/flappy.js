@@ -100,13 +100,23 @@ function passarinho(alturaJogo) {
     this.setY(alturaJogo / 2)
 }
 
+
+
+function Progresso() {
+    this.elemento = novoElemento('span', 'progresso')
+    this.atualizarPontos = pontos => {
+        this.elemento.innerHTML = pontos
+    }
+    this.atualizarPontos(0)
+}
+
 //const parede = new BarreirasObj(700, 1200, 200, 400)
 const parede = new BarreirasObj(700, 1200, 200, 400, () => {})
 
 const passaro = new passarinho(700)
 const areaDoJogo = document.querySelector('[wm-flappy]')
-
 areaDoJogo.appendChild(passaro.elemento)
+areaDoJogo.appendChild(new Progresso().elemento)
 parede.pares.forEach(par => areaDoJogo.appendChild(par.elemento))
 setInterval(() => {
     parede.animar()
