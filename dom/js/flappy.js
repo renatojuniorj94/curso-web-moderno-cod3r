@@ -132,6 +132,18 @@ function estaoSobrepostos(elementoA, elementoB) {
     return horizontal && vertical
 }
 
+function colidiu(passaro, barreiras) {
+    let colidiu = false
+    barreiras.pares.forEach(parDeBarreiras => {
+        if (!colidiu) {
+            const superior = parDeBarreiras.superior.elemento
+            const inferior = parDeBarreiras.inferior.elemento
+            colidiu = estaoSobrepostos(passaro.elemento, superior) || estaoSobrepostos(passaro.elemento, inferior)
+        }
+    })
+    return colidiu
+}
+
 function FlappyBird() {
     let pontos = 0
     const areaDoJogo = document.querySelector('[wm-flappy')
