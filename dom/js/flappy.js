@@ -162,6 +162,10 @@ function FlappyBird() {
         //loop do jogo
         const temporizador = setInterval(() => {
             barreiras.animar()
+
+            if(colidiu(passaro, barreiras)) {
+                clearInterval(temporizador)
+            }
         }, 20)
     }
 }
