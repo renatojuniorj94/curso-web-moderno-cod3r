@@ -171,3 +171,4 @@ function FlappyBird() {
 }
 
 new FlappyBird().start()
+new FlappyBird().start()
