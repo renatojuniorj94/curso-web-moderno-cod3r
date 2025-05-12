@@ -54,6 +54,8 @@ function BarreirasObj(altura, largura, abertura, espaco, notificarPonto) {
         new parDeBarreiras(altura, abertura, largura + espaco * 3)
     ]
 
+    this.pares.forEach(par => par.pontuado = false)
+
     const deslocamento = 3
     this.animar = () => {
         this.pares.forEach(par => {
@@ -63,11 +65,12 @@ function BarreirasObj(altura, largura, abertura, espaco, notificarPonto) {
             if (par.getX() < -par.getLargura()) {
                 par.setX(par.getX() + espaco * this.pares.length)
                 par.sortearAbertura()
+                par.pontuado = false
             }
 
-            const meio = largura / 2
+            /* const meio = largura / 2
             const cruzouOMeio = par.getX() + deslocamento >= meio && par.getX() > meio
-            if(cruzouOMeio) notificarPonto()
+            if(cruzouOMeio) notificarPonto() */
         })
     }
 }
@@ -159,15 +162,28 @@ function FlappyBird() {
     barreiras.pares.forEach(par => areaDoJogo.appendChild(par.elemento))
 
     this.start = () => {
-        //loop do jogo
-        const temporizador = setInterval(() => {
-            barreiras.animar()
+    const temporizador = setInterval(() => {
+        barreiras.animar()
+        passaro.animar()
 
-            if(colidiu(passaro, barreiras)) {
-                clearInterval(temporizador)
+        if(colidiu(passaro, barreiras)) {
+            clearInterval(temporizador)
+        }
+
+        // Nova verificação: se o passaro passou pelo centro de uma barreira sem colidir
+        barreiras.pares.forEach(par => {
+            const barreiraX = par.getX() + par.getLargura()
+            const passaroMeio = passaro.elemento.getBoundingClientRect().left + passaro.elemento.clientWidth / 2
+            const barreiraMeio = par.elemento.getBoundingClientRect().left + par.elemento.clientWidth / 2
+
+            if (!par.pontuado && passaroMeio > barreiraMeio) {
+                par.pontuado = true
+                progresso.atualizarPontos(++pontos)
             }
-        }, 20)
-    }
+        })
+    }, 20)
+}
+
 }
 
 new FlappyBird().start()
