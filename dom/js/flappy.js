@@ -170,7 +170,7 @@ function FlappyBird() {
                 clearInterval(temporizador)
                 botaoReiniciar.style.display = 'block' // mostra o botão
             }
-
+ 
             if (colidiu(passaro, barreiras)) {
                 clearInterval(temporizador)
             }
@@ -206,8 +206,6 @@ botaoReiniciar.style.transform = 'translate(-50%, -50%)'
 botaoReiniciar.style.padding = '10px 20px'
 botaoReiniciar.style.fontSize = '20px'
 document.querySelector('[wm-flappy]').appendChild(botaoReiniciar)
-
-
 
 botaoReiniciar.onclick = () => {
     location.reload() // recarrega a página, reiniciando tudo
