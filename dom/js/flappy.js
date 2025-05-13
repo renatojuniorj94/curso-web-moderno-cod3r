@@ -36,7 +36,7 @@ function parDeBarreiras(altura, abertura, x) {
     }
 
     this.getX = () => parseInt(this.elemento.style.left.split('px')[0])
-    this.setX = x => this.elemento.style.left = `${x}px`   
+    this.setX = x => this.elemento.style.left = `${x}px`
     this.getLargura = () => this.elemento.clientWidth
 
     this.sortearAbertura()
@@ -91,9 +91,9 @@ function passarinho(alturaJogo) {
         const novoY = this.getY() + (voando ? 8 : -5)
         const alturaMaxima = alturaJogo - this.elemento.clientHeight
 
-        if(novoY <= 0) {
+        if (novoY <= 0) {
             this.setY(0)
-        } else if(novoY >= alturaMaxima) {
+        } else if (novoY >= alturaMaxima) {
             this.setY(alturaMaxima)
         } else {
             this.setY(novoY)
@@ -162,28 +162,53 @@ function FlappyBird() {
     barreiras.pares.forEach(par => areaDoJogo.appendChild(par.elemento))
 
     this.start = () => {
-    const temporizador = setInterval(() => {
-        barreiras.animar()
-        passaro.animar()
+        const temporizador = setInterval(() => {
+            barreiras.animar()
+            passaro.animar()
 
-        if(colidiu(passaro, barreiras)) {
-            clearInterval(temporizador)
-        }
-
-        // Nova verificação: se o passaro passou pelo centro de uma barreira sem colidir
-        barreiras.pares.forEach(par => {
-            const barreiraX = par.getX() + par.getLargura()
-            const passaroMeio = passaro.elemento.getBoundingClientRect().left + passaro.elemento.clientWidth / 2
-            const barreiraMeio = par.elemento.getBoundingClientRect().left + par.elemento.clientWidth / 2
-
-            if (!par.pontuado && passaroMeio > barreiraMeio) {
-                par.pontuado = true
-                progresso.atualizarPontos(++pontos)
+            if (colidiu(passaro, barreiras)) {
+                clearInterval(temporizador)
+                botaoReiniciar.style.display = 'block' // mostra o botão
             }
-        })
-    }, 20)
-}
+
+            if (colidiu(passaro, barreiras)) {
+                clearInterval(temporizador)
+            }
+
+            // Nova verificação: se o passaro passou pelo centro de uma barreira sem colidir
+            barreiras.pares.forEach(par => {
+                const barreiraX = par.getX() + par.getLargura()
+                const passaroMeio = passaro.elemento.getBoundingClientRect().left + passaro.elemento.clientWidth / 2
+                const barreiraMeio = par.elemento.getBoundingClientRect().left + par.elemento.clientWidth / 2
+
+                if (!par.pontuado && passaroMeio > barreiraMeio) {
+                    par.pontuado = true
+                    progresso.atualizarPontos(++pontos)
+                }
+            })
+        }, 20)
+    }
 
 }
 
+
+//Implementando botão restart
 new FlappyBird().start()
+
+const botaoReiniciar = document.createElement('button')
+botaoReiniciar.id = 'btn-reiniciar'
+botaoReiniciar.innerText = 'Reiniciar'
+botaoReiniciar.style.display = 'none'
+botaoReiniciar.style.position = 'absolute'
+botaoReiniciar.style.top = '50%'
+botaoReiniciar.style.left = '50%'
+botaoReiniciar.style.transform = 'translate(-50%, -50%)'
+botaoReiniciar.style.padding = '10px 20px'
+botaoReiniciar.style.fontSize = '20px'
+document.querySelector('[wm-flappy]').appendChild(botaoReiniciar)
+
+
+
+botaoReiniciar.onclick = () => {
+    location.reload() // recarrega a página, reiniciando tudo
+}
