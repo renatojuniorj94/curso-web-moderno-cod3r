@@ -59,5 +59,10 @@
                 linhas.forEach(linha => tabela.appendChild(linha))
                 document.body.appendChild(tabela)
             },
+            erro(e) {
+                const msg = document.createTextNode(`${e.code}: ${e.text}`)
+                document.body
+            }
+        })
     </script>
 </body>
