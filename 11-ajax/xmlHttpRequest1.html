@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 
 <head>
@@ -21,8 +21,8 @@
                     config.sucesso(xhr.response)
                 } else if (xhr.status >= 400) {
                     config.erro({
-                        code: xhr.status,
-                        text: xhr.statusText
+                        codigo: xhr.status,
+                        texto: xhr.statusText
                     })
                 }
             }
@@ -30,18 +30,13 @@
             xhr.send()
         }
 
-        ajax({
-            url: "dados/estados.json",
-            metodo: "get",
-            sucesso(resposta) {
-                const estados = JSON.parse(resposta)
-
-                const linhas = estados.map(estado => {
+        function criarTabela(estados) {
+            const linhas = estados.map(estado => {
                     const tdId = document.createElement('td')
                     tdId.innerHTML  = estado.id
 
                     const tdNome = document.createElement('td')
-                    td.nome.innerHTML = estado.nome
+                    tdNome.nome.innerHTML = estado.nome
 
                     const tdSigla = document.createElement('td')
                     tdSigla.innerHTML = estado.sigla
@@ -58,11 +53,18 @@
                 const tabela = document.createElement('table')
                 linhas.forEach(linha => tabela.appendChild(linha))
                 document.body.appendChild(tabela)
+        }
+
+        ajax({
+            url: "dados/estados.json",
+            metodo: "get",
+            sucesso(resposta) {
+                const estados = JSON.parse(resposta)
+                criarTabela(estados)
             },
             erro(e) {
-                const msg = document.createTextNode(`${e.code}: ${e.text}`)
-                document.body
+                const msg = document.createTextNode(`${e.codigo}: ${e.texto}`)
+                document.body.appendChild(msg)
             }
         })
     </script>
-</body>
