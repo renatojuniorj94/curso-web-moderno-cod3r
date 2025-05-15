@@ -14,7 +14,7 @@
         // ...
         function ajax(config) {
             const xhr = XMLHttpRequest()
-            xhr.open("GET", config.url, true)// 1 - Abrir requisição do tipo "GET" / 2 - Espero receber dentro de "config", um parâmetro "url" / 3 - Esse parâmetro diz que a requisição vai ser feita de forma assincrona.
+            xhr.open(config.metodo, config.url, true)// 1 - Abrir requisição do tipo "GET" ou config.metodo/ 2 - Espero receber dentro de "config", um parâmetro "url" / 3 - Esse parâmetro diz que a requisição vai ser feita de forma assincrona.
 
             xhr.onload = e => {
                 if (xhr.status === 200) {
@@ -26,6 +26,38 @@
                     })
                 }
             }
+
+            xhr.send()
         }
+
+        ajax({
+            url: "dados/estados.json",
+            metodo: "get",
+            sucesso(resposta) {
+                const estados = JSON.parse(resposta)
+
+                const linhas = estados.map(estado => {
+                    const tdId = document.createElement('td')
+                    tdId.innerHTML  = estado.id
+
+                    const tdNome = document.createElement('td')
+                    td.nome.innerHTML = estado.nome
+
+                    const tdSigla = document.createElement('td')
+                    tdSigla.innerHTML = estado.sigla
+
+                    const tr = document.createElement('tr')
+
+                    tr.appendChild(tdId)
+                    tr.appendChild(tdNome)
+                    tr.appendChild(tdSigla)
+
+                    return tr
+                })
+
+                const tabela = document.createElement('table')
+                linhas.forEach(linha => tabela.appendChild(linha))
+                document.body.appendChild(tabela)
+            },
     </script>
 </body>
