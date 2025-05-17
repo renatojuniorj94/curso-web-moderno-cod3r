@@ -10,3 +10,4 @@ app.get('/teste', (req, res) => res.send(new Date)) //Função middleware
 app.listen(8080, () => console.log('Executando...'))
 app.listen(8080, () => console.log('Executando...'))
 app.listen(8080, () => console.log('Executando...'))
+app.listen(8080, () => console.log('Executando...'))
