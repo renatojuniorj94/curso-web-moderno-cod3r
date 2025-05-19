@@ -9,4 +9,13 @@ app.get('/teste', (req, res) => res.send(new Date)) //Função middleware
 
 const multer = require('multer')
 
+const storage = multer.diskStorage({
+    destination: function (req, file, callback) {
+        callback(null, '.')
+    },
+    filename: function (req, file, callback) {
+        callback(null, `${Date.now()}_${file.originalname}`)
+    }
+})
+
 app.listen(8080, () => console.log('Executando...'))
