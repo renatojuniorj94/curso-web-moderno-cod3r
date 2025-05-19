@@ -40,7 +40,7 @@
             xhr.send(config.formData)
         }
 
-        document.querySelector('[type=file]').onchage = e => {
+        document.querySelector('[type=file]').onchange = e => {
             const formData = new FormData()
             formData.append(e.target.name, e.target.files[0])
 
