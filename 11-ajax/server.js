@@ -7,4 +7,6 @@ app.use(express.static('.'))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.get('/teste', (req, res) => res.send(new Date)) //Função middleware
 
+const multer = require('multer')
+
 app.listen(8080, () => console.log('Executando...'))
