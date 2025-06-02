@@ -31,5 +31,3 @@ app.post('/upload', (req, res) => {
 })
 
 app.listen(8080, () => console.log('Executando...'))
-app.listen(8080, () => console.log('Executando...'))
-app.listen(8080, () => console.log('Executando...'))
